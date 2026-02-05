@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio – Data Scientist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>👋 Bonjour, je suis Data Scientist</h1>
+  <p>Spécialisée en assurance, data science & optimisation.</p>
+
+  <h2>Projets</h2>
+  <ul>
+    <li>📊 Prédiction du churn client</li>
+    <li>⚙️ Optimisation de tournées logistiques</li>
+    <li>🧠 Machine Learning end-to-end</li>
+  </ul>
+
+  <p>
+    🔗 <a href="https://github.com/djey31">GitHub</a> |
+    🔗 <a href="https://linkedin.com/in/Djeneba Coulibaly">LinkedIn</a>
+  </p>
+</body>
+</html>
