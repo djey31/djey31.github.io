@@ -2,10 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Djénéba Coulibaly — Data Portfolio</title>
+  <title>Djénéba Coulibaly — Data Scientist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="layout">
@@ -21,13 +22,14 @@
     <div class="about-box">
       <h3>Profil</h3>
       <p>
-        Data Scientist spécialisée en économétrie et statistiques appliquées.
-        Je conçois des solutions analytiques complètes : exploration,
-        modélisation prédictive, analyse NLP, visualisation et déploiement.
+        Étudiante en Master 2 Économétrie & Statistique, spécialisée en Data Science.
+        Je développe des solutions analytiques complètes : exploration des données,
+        modélisation prédictive, analyse NLP, visualisation décisionnelle
+        et déploiement industrialisé.
       </p>
       <p>
-        Mon approche repose sur la rigueur méthodologique,
-        l’analyse orientée décision et l’industrialisation des modèles.
+        Mon approche combine rigueur statistique, compréhension métier
+        et capacité à industrialiser les modèles.
       </p>
     </div>
 
@@ -36,14 +38,13 @@
       <button onclick="showSection('projects')">Projets</button>
       <button onclick="showSection('skills')">Compétences</button>
       <button onclick="showSection('education')">Formation</button>
-      <button onclick="showSection('tools')">Logiciels</button>
+      <button onclick="showSection('certifications')">Certifications</button>
       <button onclick="showSection('contact')">Contact</button>
     </nav>
 
   </aside>
 
-
-  <!-- MAIN CONTENT -->
+  <!-- CONTENT -->
   <main class="content">
 
     <!-- EXPERIENCES -->
@@ -51,25 +52,28 @@
       <h2>Expériences professionnelles</h2>
 
       <div class="card">
-        <h3>Data Scientist — Diot-Siaci</h3>
+        <h3>Data Scientist — Diot-Siaci (Paris)</h3>
         <span class="date">09/2025 – Aujourd’hui</span>
         <ul>
-          <li>Préparation et structuration de données multi-sources</li>
-          <li>Développement de modèles ML (classification, régression)</li>
-          <li>Analyse NLP des verbatims clients</li>
-          <li>Création de dashboards décisionnels</li>
-          <li>Accompagnement sur des sujets d’IA générative</li>
+          <li>Préparation et structuration de données multi-sources (SQL, Python)</li>
+          <li>Analyse exploratoire (EDA) et détection de patterns</li>
+          <li>Développement de modèles ML (régression, classification)</li>
+          <li>Analyse NLP des verbatims clients (TF-IDF, clustering, sentiment)</li>
+          <li>Création de dashboards décisionnels (Power BI)</li>
+          <li>Accompagnement sur des cas d’usage IA générative</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>Data Scientist — DEKI</h3>
+        <h3>Data Scientist — DEKI (Marseille)</h3>
         <span class="date">05/2025 – 08/2025</span>
         <ul>
-          <li>Optimisation logistique (Vehicle Routing Problem)</li>
-          <li>Déploiement API Flask</li>
+          <li>Optimisation logistique via algorithme VRP (PyVroom)</li>
+          <li>Modélisation prédictive et déploiement via API Flask</li>
           <li>Containerisation Docker & Docker Compose</li>
-          <li>Déploiement cloud (Scaleway)</li>
+          <li>Déploiement cloud sur Scaleway</li>
+          <li>Automatisation pipelines (Python, VBA)</li>
+          <li>Tests en conditions réelles pour validation des modèles</li>
         </ul>
       </div>
     </section>
@@ -82,37 +86,69 @@
       <div class="card">
         <h3>Football Analytics Pro</h3>
         <p>
-          Application Streamlit connectée à une API REST permettant
-          l’analyse statistique et la visualisation interactive de données.
+          Application Streamlit connectée à l’API Football-Data.org permettant
+          l’analyse en temps réel des performances des équipes et la prédiction probabiliste des matchs.
+        </p>
+        <p>
+          Intégration d’un module prédictif basé sur indicateurs statistiques,
+          visualisations interactives (Plotly) et containerisation complète via Docker.
+        </p>
+        <p><strong>Stack :</strong> Python, Streamlit, Plotly, Docker, API REST</p>
+        <p>
+          🔗 <a href="https://github.com/djey31/football-analytics" target="_blank">GitHub</a>
         </p>
       </div>
 
       <div class="card">
-        <h3>Analyse des Verbatims — NLP</h3>
+        <h3>Analyse des Verbatims Clients — NLP</h3>
         <p>
-          Extraction d’insights à partir de retours clients via
-          vectorisation TF-IDF et clustering.
+          Projet d’analyse textuelle visant à identifier les causes d’insatisfaction client
+          via nettoyage des données, vectorisation TF-IDF,
+          clustering thématique et analyse de sentiment.
         </p>
+        <p>
+          Objectif : extraire des insights décisionnels pour améliorer l’expérience client.
+        </p>
+        <p><strong>Stack :</strong> Python, Scikit-learn, NLP</p>
       </div>
 
       <div class="card">
         <h3>Modélisation Prédictive — Trafic Web</h3>
         <p>
-          Modèles économétriques (Logit, Random Forest) pour prédire
-          le trafic généré par des contenus.
+          Analyse économétrique et machine learning visant à prédire
+          les recettes générant un trafic élevé.
         </p>
+        <p>
+          Comparaison de modèles : LPM, Logit, Random Forest,
+          évaluation des performances et recommandations stratégiques.
+        </p>
+        <p><strong>Stack :</strong> R, Econométrie, Random Forest</p>
       </div>
+
+      <div class="card">
+        <h3>Simulation Marché Boursier — Trader vs IA</h3>
+        <p>
+          Jeu interactif simulant des stratégies de trading en temps réel.
+          Implémentation d’un agent simulé pour tester la gestion du risque.
+        </p>
+        <p><strong>Stack :</strong> Python, NumPy, Matplotlib, Tkinter</p>
+      </div>
+
     </section>
 
 
     <!-- SKILLS -->
     <section id="skills" class="section">
-      <h2>Compétences</h2>
+      <h2>Compétences Techniques</h2>
+
       <div class="card">
-        <p><strong>Langages :</strong> Python, R, SQL, JavaScript</p>
-        <p><strong>Machine Learning :</strong> Régression, Classification, Random Forest</p>
-        <p><strong>NLP :</strong> TF-IDF, Clustering, Analyse de sentiment</p>
-        <p><strong>Optimisation :</strong> Vehicle Routing Problem</p>
+        <p><strong>Langages :</strong> Python, R, SQL, JavaScript, MATLAB, VBA, PHP, HTML, CSS, Bootstrap, Streamlit</p>
+        <p><strong>Frameworks :</strong> Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, PyVroom</p>
+        <p><strong>Déploiement :</strong> Flask, Docker, Postman</p>
+        <p><strong>BI :</strong> Power BI, Tableau, Figma</p>
+        <p><strong>Base de données :</strong> MySQL, DBeaver</p>
+        <p><strong>Cloud :</strong> Scaleway</p>
+        <p><strong>Méthodologies :</strong> EDA, Modélisation statistique, ML, Tests en conditions réelles</p>
       </div>
     </section>
 
@@ -123,7 +159,7 @@
 
       <div class="card">
         <h3>Master Économétrie & Statistique</h3>
-        <p>Aix-Marseille School of Economics (2021–2026)</p>
+        <p>Aix-Marseille School of Economics (2021 – 2024)</p>
       </div>
 
       <div class="card">
@@ -133,16 +169,16 @@
 
       <div class="card">
         <h3>Baccalauréat Scientifique</h3>
-        <p>Série Scientifique</p>
       </div>
     </section>
 
 
-    <!-- TOOLS -->
-    <section id="tools" class="section">
-      <h2>Logiciels & Outils</h2>
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section">
+      <h2>Certifications</h2>
       <div class="card">
-        <p>Docker • Flask • Streamlit • Power BI • Tableau • Git • GitHub • MySQL • Scaleway • VS Code • Jupyter</p>
+        <p>IA Générative — LinkedIn Learning</p>
+        <p>Power BI — Udemy</p>
       </div>
     </section>
 
@@ -154,15 +190,16 @@
         <p>📍 Paris</p>
         <p>📞 +33 7 58 08 06 79</p>
         <p>✉️ djenebacoulibaly.pro@gmail.com</p>
-        <p>LinkedIn : djénéba-coulibaly</p>
+        <p>
+          🔗 <a href="https://www.linkedin.com/in/djénéba-coulibaly-7a24b9272" target="_blank">LinkedIn</a><br>
+          🔗 <a href="https://github.com/djey31" target="_blank">GitHub</a>
+        </p>
       </div>
     </section>
 
   </main>
-
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
