@@ -69,7 +69,6 @@
         <ul>
           <li>Modélisation et déploiement de modèles prédictifs via API sur infrastructure cloud (Scaleway)</li>
           <li>Optimisation logistique avec PyVroom (réduction coûts/délais)</li>
-          <li>Automatisation de pipelines data & MLOps (collecte, entraînement, mise à jour)</li>
           <li>Analyse exploratoire, feature engineering et préparation des données</li>
           <li>Conception de dashboards interactifs (KPI) et POC valorisés par un design UI (Figma)</li>
         </ul>
@@ -106,6 +105,32 @@
         <p><strong>Stack :</strong> Python, Snowflake Cortex, Scikit-learn, NLTK, Streamlit, Pandas</p>
       </div>
 
+      <div class="card">
+        <h3>Automated Classification of Dry Bean Varieties — Supervised Learning</h3>
+        <span class="date">Janvier 2026 — Projet académique (AMSE)</span>
+      
+        <p>
+          Projet de classification supervisée visant à automatiser l’identification de variétés de haricots secs afin
+          de réduire l’asymétrie d’information liée au tri manuel. :contentReference[oaicite:1]{index=1}
+        </p>
+      
+        <ul>
+          <li><strong>Données :</strong> UCI Dry Bean Dataset — 13 543 observations, 7 variétés, 16 descripteurs morphologiques (area, perimeter, shape factors…). :contentReference[oaicite:2]{index=2}</li>
+          <li><strong>Pipeline :</strong> EDA → preprocessing (RobustScaler) → gestion du déséquilibre (SMOTE) → comparaison modèles + validation cross-validation stratifiée (5-fold). :contentReference[oaicite:3]{index=3}</li>
+          <li><strong>Modèles testés :</strong> Logit/Logistic Regression, Elastic Net, SVM (RBF), MLP. :contentReference[oaicite:4]{index=4}</li>
+          <li><strong>Résultat clé :</strong> le meilleur modèle est <strong>SVM (RBF)</strong> en espace de features original (sans PCA), avec <strong>Macro-F1 = 0.9369</strong> et <strong>Balanced Accuracy = 0.9357</strong>. :contentReference[oaicite:5]{index=5}</li>
+          <li><strong>Insight :</strong> la réduction de dimension (PCA) peut dégrader la séparabilité malgré une variance expliquée élevée. :contentReference[oaicite:6]{index=6}</li>
+        </ul>
+      
+        <p><strong>Stack :</strong> Python, scikit-learn, PCA, SMOTE, SVM, MLP, EDA</p>
+      
+        <p>
+          🔗 <a href="assets/presentation.pdf" target="_blank">Slides (PDF)</a>
+          &nbsp;|&nbsp;
+          🔗 <a href="#" target="_blank">GitHub (à ajouter)</a>
+        </p>
+      </div>
+      
       <div class="card">
         <h3>Simulation Marché Boursier — Trader vs IA</h3>
         <p>
