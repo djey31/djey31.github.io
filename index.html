@@ -117,7 +117,7 @@
         <ul>
           <li><strong>Données :</strong> UCI Dry Bean Dataset — 13 543 observations, 7 variétés, 16 descripteurs morphologiques (area, perimeter, shape factors…). </li>
           <li><strong>Pipeline :</strong> EDA → preprocessing (RobustScaler) → gestion du déséquilibre (SMOTE) → comparaison modèles + validation cross-validation stratifiée (5-fold).</li>
-          <li><strong>Modèles testés :</strong> Logit/Logistic Regression, Elastic Net, SVM (RBF), MLP. :contentReference[oaicite:4]{index=4}</li>
+          <li><strong>Modèles testés :</strong> Logit/Logistic Regression, Elastic Net, SVM (RBF), MLP.</li>
           <li><strong>Résultat clé :</strong> le meilleur modèle est <strong>SVM (RBF)</strong> en espace de features original (sans PCA), avec <strong>Macro-F1 = 0.9369</strong> et <strong>Balanced Accuracy = 0.9357</strong>.</li>
           <li><strong>Insight :</strong> la réduction de dimension (PCA) peut dégrader la séparabilité malgré une variance expliquée élevée.</li>
         </ul>
