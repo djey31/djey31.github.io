@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Djénéba Coulibaly · Data Scientist</title>
+<meta name="description" content="Data Scientist, 1 an et 4 mois d'expérience en assurance et logistique. ML, IA générative, FastAPI, Docker. Disponible immédiatement en Île-de-France.">
+<style>
+:root{
+  --bg:#f4f6fb; --surface:#ffffff; --ink:#222; --muted:#444; --line:#dbe3f1;
+  --accent:#2E5FA3; --accent-soft:#eef2fb; --navy:#1F3864; --ok:#2E5FA3;
+  --serif:"Segoe UI",Arial,sans-serif; --sans:"Segoe UI",Arial,sans-serif; --mono:"Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121a2b;--surface:#1a2440;--ink:#eef2fb;--muted:#a8c0e8;--line:#2a3a60;--accent:#7fa6e0;--accent-soft:#223257;--navy:#0e1a33;--ok:#a8c0e8;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;font-size:1rem;padding-inline:20px}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto}
+nav{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff;margin-inline:-20px;padding:12px 20px}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+nav .brand{font-family:var(--serif);font-weight:650;text-decoration:none;font-size:1.1rem}
+nav ul{display:flex;gap:18px;list-style:none;flex-wrap:wrap}
+nav ul a{text-decoration:none;color:#d0dff5;font-size:.92rem}
+nav ul a:hover{color:#fff}
+section{padding-block:64px;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:1.9rem;margin-bottom:28px;letter-spacing:-.01em}
+h2 small{display:block;font-family:var(--mono);font-size:.75rem;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;font-weight:500}
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 200px;gap:40px;align-items:center;padding-block:72px 56px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:500;color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent);padding:5px 12px;border-radius:99px;margin-bottom:18px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.hero h1{color:var(--navy);font-family:var(--serif);font-size:clamp(2.3rem,6vw,3.6rem);line-height:1.05;font-weight:650;letter-spacing:-.02em}
+.hero .role{font-size:1.25rem;color:var(--accent);font-weight:600;margin:10px 0 16px}
+.hero p.pitch{font-size:1.1rem;color:var(--muted);max-width:560px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid var(--line);background:var(--surface)}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.08)}
+.photo{width:200px;height:200px;border-radius:50%;overflow:hidden;background:var(--accent-soft);display:grid;place-items:center;font-family:var(--serif);font-size:3.4rem;color:var(--accent);border:4px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+.photo img{width:100%;height:100%;object-fit:cover}
+/* KPIs */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+.kpi{box-shadow:0 2px 12px rgba(31,56,100,0.07);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.kpi b{display:block;font-family:var(--serif);font-size:1.7rem;font-weight:650;line-height:1.1}
+.kpi span{font-size:.86rem;color:var(--muted)}
+/* EXPERIENCE */
+.job{display:grid;grid-template-columns:180px 1fr;gap:24px;padding-block:22px;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:0}
+.job .when{font-family:var(--mono);font-size:.8rem;color:var(--muted);padding-top:4px}
+.job h3{font-size:1.15rem;font-weight:600}
+.job .org{color:var(--accent);font-weight:500;margin-bottom:10px}
+.job ul{padding-left:18px;color:var(--muted)}
+.job li{margin-bottom:6px}
+.job li strong{color:var(--ink);font-weight:600}
+/* PROJECTS */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{box-shadow:0 2px 12px rgba(31,56,100,0.07);background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column}
+.card.feature{grid-column:1/-1;border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.tag{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:8px}
+.card h3{font-size:1.2rem;font-weight:600;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.card ul{color:var(--muted);font-size:.95rem;padding-left:18px;margin-top:8px}
+.result{margin-top:14px;padding:10px 14px;background:var(--accent-soft);border-radius:8px;font-size:.92rem}
+.result strong{color:var(--accent)}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.stack span{font-family:var(--mono);font-size:.74rem;padding:3px 9px;border:1px solid var(--line);border-radius:99px;color:var(--muted)}
+.links{display:flex;gap:16px;margin-top:auto;padding-top:18px;font-size:.9rem;font-weight:600}
+.links a{color:var(--accent);text-decoration:none}
+.links a:hover{text-decoration:underline}
+.note{font-size:.82rem;color:var(--muted);font-style:italic;margin-top:12px}
+.acad{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+.acad a{display:block;padding:16px 18px;border:1px solid var(--line);border-radius:10px;text-decoration:none;background:var(--surface)}
+.acad a:hover{border-color:var(--accent)}
+.acad b{display:block;font-weight:600}
+.acad span{font-size:.88rem;color:var(--muted)}
+h3.sub{font-family:var(--serif);font-size:1.25rem;font-weight:650;margin-top:40px}
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.skill{border-left:3px solid var(--accent);padding:4px 0 4px 16px}
+.skill h4{font-size:.95rem;font-weight:600;margin-bottom:4px}
+.skill p{color:var(--muted);font-size:.93rem}
+/* EDU */
+.edu{display:grid;gap:14px}
+.edu div{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--line)}
+.edu div:first-child{border-top:0}
+.edu b{font-weight:600}
+.edu span{color:var(--muted);font-size:.92rem}
+/* CONTACT */
+.contact{text-align:center}
+.contact p{color:var(--muted);max-width:520px;margin:0 auto 24px}
+.contact .cta{justify-content:center}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding-block:28px}
+@media (prefers-color-scheme:dark){h2,.hero h1{color:var(--ink)}}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;text-align:left}
+  .photo{width:120px;height:120px;font-size:2.2rem;order:-1}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .job{grid-template-columns:1fr;gap:6px}
+  .grid,.acad,.skills{grid-template-columns:1fr}
+  nav ul{gap:12px}
+  section{padding-block:48px}
+}
+html[lang="fr"] .en,html[lang="en"] .fr{display:none!important}
+.lang{font:600 .8rem var(--mono);background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:4px 10px;cursor:pointer;color:#a8c0e8}
+.lang:hover{border-color:var(--accent)}
+html[lang="fr"] .lang [data-l="fr"],html[lang="en"] .lang [data-l="en"]{color:#fff}
+.kpi b span{font-size:inherit;color:inherit}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top">D. Coulibaly</a>
+  <ul>
+    <li><a href="#experience"><span class="fr">Expérience</span><span class="en">Experience</span></a></li>
+    <li><a href="#projets"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
+    <li><a href="#competences"><span class="fr">Compétences</span><span class="en">Skills</span></a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button class="lang" id="langBtn" type="button" aria-label="Changer de langue / Switch language"><span data-l="fr">FR</span> <span data-l="en">EN</span></button></li>
+  </ul>
+</div></nav>
+
+<main class="wrap" id="top">
+
+<section class="hero">
+  <div>
+    <span class="status"><span class="fr">Disponible immédiatement · CDI · Île-de-France</span><span class="en">Available now · Permanent role · Paris area</span></span>
+    <h1>Djénéba Coulibaly</h1>
+    <p class="role"><span class="fr">Data Scientist · ML &amp; IA générative</span><span class="en">Data Scientist · ML &amp; Generative AI</span></p>
+    <p class="pitch"><span class="fr">1 an et 4 mois d'expérience en data, en assurance et en logistique. Je conçois des modèles et des outils data utilisés par les équipes métier, de l'analyse jusqu'à l'API (Python, FastAPI, Docker, LLM).</span><span class="en">1 year and 4 months of data experience in insurance and logistics. I build models and data tools that business teams actually use, from analysis to API (Python, FastAPI, Docker, LLMs).</span></p>
+    <div class="cta">
+      <a class="btn primary fr" href="CV_Djeneba_Coulibaly.pdf" download>Télécharger mon CV</a><a class="btn primary en" href="CV_Djeneba_Coulibaly_EN.pdf" download>Download my CV</a>
+      <a class="btn" href="https://github.com/djey31" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/dj%C3%A9n%C3%A9ba-coulibaly-7a24b9272" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="photo"><img src="assets/photo-pro.jpg" alt="Photo de Djénéba Coulibaly" onerror="this.remove()">DC</div>
+</section>
+
+<div class="kpis">
+  <div class="kpi"><b><span class="fr">1 an 4 mois</span><span class="en">1 yr 4 mo</span></b><span><span class="fr">d'expérience en data</span><span class="en">of data experience</span></span></div>
+  <div class="kpi"><b>100+ → 3</b><span><span class="fr">cas suspects à traiter après scoring d'anomalies</span><span class="en">suspicious cases left after anomaly scoring</span></span></div>
+  <div class="kpi"><b><span class="fr">11 outils</span><span class="en">11 tools</span></b><span><span class="fr">métier pilotés par LLM (function calling)</span><span class="en">driven by an LLM (function calling)</span></span></div>
+  <div class="kpi"><b><span class="fr">Mention Bien</span><span class="en">With honours</span></b><span>MSc Econometrics &amp; Data Science, AMSE</span></div>
+</div>
+
+<section id="experience">
+  <h2><small><span class="fr">Parcours</span><span class="en">Career</span></small><span class="fr">Expérience professionnelle</span><span class="en">Professional experience</span></h2>
+
+  <div class="job">
+    <div class="when"><span class="fr">sept. 2025 à sept. 2026<br>Paris · Alternance</span><span class="en">Sept 2025 to Sept 2026<br>Paris · Work-study</span></div>
+    <div>
+      <h3><span class="fr">Data Scientist &amp; IA</span><span class="en">Data Scientist &amp; AI</span></h3>
+      <p class="org">Diot-Siaci · <span class="fr">Courtier en assurance</span><span class="en">Insurance brokerage</span></p>
+      <ul>
+        <li><span class="fr"><strong>Détection d'anomalies sur les remboursements santé :</strong> système de scoring multidimensionnel (Z-score, séries temporelles, pondération par convergence). Le volume de cas suspects passe de plus de 100 à 3 cas ciblés. La méthode est devenue le standard de priorisation de l'équipe.</span><span class="en"><strong>Anomaly detection on health claims:</strong> multidimensional scoring system (Z-scores, time series, convergence weighting) that narrowed over 100 suspicious cases down to 3 targeted files. The method became the team's standard prioritisation approach.</span></li>
+        <li><span class="fr"><strong>Analyse sémantique de verbatims clients :</strong> pipeline LLM (Mistral Large 2 sur Snowflake Cortex) avec taxonomie, prompt engineering et classification, mis à disposition des équipes métier dans une application Streamlit autonome.</span><span class="en"><strong>Semantic analysis of customer verbatims:</strong> LLM pipeline (Mistral Large 2 on Snowflake Cortex) covering taxonomy design, prompt engineering and classification, delivered as a Streamlit app used autonomously by business teams.</span></li>
+        <li><span class="fr"><strong>Enquêtes clients :</strong> traitement de bout en bout et tableaux de bord dynamiques qui ont servi à réorienter des leviers commerciaux.</span><span class="en"><strong>Customer surveys:</strong> end-to-end processing and dynamic dashboards that helped redirect commercial priorities.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="when"><span class="fr">mai à août 2025<br>Marseille · Stage</span><span class="en">May to Aug 2025<br>Marseille · Internship</span></div>
+    <div>
+      <h3>Data Scientist</h3>
+      <p class="org">DEKI · <span class="fr">Logistique verte</span><span class="en">Green logistics</span></p>
+      <ul>
+        <li><span class="fr"><strong>Optimisation de tournées :</strong> solution algorithmique avec PyVroom pour réduire les trajets des transporteurs (objectif visé : jusqu'à 80 % d'émissions de CO₂ en moins).</span><span class="en"><strong>Route optimisation:</strong> algorithmic solution with PyVroom to shorten carrier routes (target: up to 80% lower CO₂ emissions).</span></li>
+        <li><span class="fr"><strong>Modèles prédictifs :</strong> contribution à l'évolution de modèles exposés via API REST sur Scaleway.</span><span class="en"><strong>Predictive models:</strong> contributed to the evolution of models exposed through REST APIs on Scaleway.</span></li>
+        <li><span class="fr"><strong>Analyse et dataviz :</strong> analyse exploratoire, feature engineering, maquettes de tableaux de bord KPI (Figma).</span><span class="en"><strong>Analysis &amp; dataviz:</strong> exploratory analysis, feature engineering, KPI dashboard prototypes (Figma).</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projets">
+  <h2><small><span class="fr">Réalisations</span><span class="en">Work</span></small><span class="fr">Projets</span><span class="en">Projects</span></h2>
+
+  <div class="grid">
+    <article class="card feature">
+      <div class="tag"><span class="fr">Projet entrepreneurial · Phase bêta</span><span class="en">Entrepreneurial project · Beta</span></div>
+      <h3>FlexDjai · <span class="fr">Automatisation commerciale par IA générative</span><span class="en">Generative AI business automation</span></h3>
+      <p><span class="fr">Plateforme qui aide les petits commerçants d'Afrique de l'Ouest et de la diaspora à gérer leur activité depuis WhatsApp : ventes, stocks, reçus.</span><span class="en">Platform helping small merchants in West Africa and the diaspora run their business from WhatsApp: sales, stock, receipts.</span></p>
+      <ul>
+        <li><span class="fr">API Claude avec function calling sur 11 outils métier et garde-fous anti-hallucination</span><span class="en">Claude API with function calling across 11 business tools and anti-hallucination guardrails</span></li>
+        <li><span class="fr">Extraction multimodale de reçus photographiés vers une base PostgreSQL multi-tenant</span><span class="en">Multimodal extraction from receipt photos into a multi-tenant PostgreSQL database</span></li>
+        <li><span class="fr">Mise en ligne sur VPS Linux avec Docker, FastAPI et Nginx</span><span class="en">Hosted on a Linux VPS with Docker, FastAPI and Nginx</span></li>
+      </ul>
+      <div class="stack"><span>Python</span><span>Claude API</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>Nginx</span></div>
+      <div class="links"><a href="https://flexdjai.com" target="_blank" rel="noopener"><span class="fr">Voir le site →</span><span class="en">Visit the site →</span></a></div>
+    </article>
+
+    <article class="card">
+      <div class="tag"><span class="fr">Projet personnel · RAG · Déployé</span><span class="en">Personal project · RAG · Deployed</span></div>
+      <h3><span class="fr">Assistant IA sur contrats d'assurance</span><span class="en">AI assistant on insurance contracts</span></h3>
+      <p><span class="fr">Système de question-réponse sur 15 conditions générales d'assurance (2 343 passages). Il répond uniquement à partir des documents, cite ses sources et s'abstient quand l'information n'y figure pas.</span><span class="en">Question-answering system over 15 insurance policies (2,343 passages). It answers only from the documents, cites its sources, and abstains when the information is not there.</span></p>
+      <ul>
+        <li><span class="fr">Découpage sous la limite du modèle, embeddings multilingues (E5) et base vectorielle ChromaDB</span><span class="en">Chunking under the model limit, multilingual embeddings (E5) and a ChromaDB vector store</span></li>
+        <li><span class="fr">Génération sourcée via API (Groq) avec garde-fou d'abstention contre les hallucinations</span><span class="en">Sourced generation via API (Groq) with an abstention guardrail against hallucinations</span></li>
+        <li><span class="fr">Évaluation (recall@k, MRR, taux de citation) et déploiement en ligne</span><span class="en">Evaluation (recall@k, MRR, citation rate) and live deployment</span></li>
+      </ul>
+      <div class="stack"><span>Python</span><span>RAG</span><span>ChromaDB</span><span>Embeddings E5</span><span>Groq</span><span>Streamlit</span></div>
+      <div class="links"><a href="https://rag-assurance-l84lyjj4nxvuvum9tmxcr5.streamlit.app" target="_blank" rel="noopener"><span class="fr">Tester la démo →</span><span class="en">Try the demo →</span></a> <a href="https://github.com/djey31/rag-assurance" target="_blank" rel="noopener"><span class="fr">Code source →</span><span class="en">Source code →</span></a></div>
+    </article>
+
+    <article class="card">
+      <div class="tag"><span class="fr">Mission pro · Assurance santé</span><span class="en">Work mission · Health insurance</span></div>
+      <h3><span class="fr">Scoring d'anomalies sur remboursements</span><span class="en">Anomaly scoring on health claims</span></h3>
+      <p><span class="fr">Combinaison de plusieurs signaux statistiques (Z-scores, dynamique temporelle) en un score de convergence pondéré exponentiellement.</span><span class="en">Several statistical signals (Z-scores, time dynamics) combined into an exponentially weighted convergence score.</span></p>
+      <div class="result"><strong>100+ → 3</strong> <span class="fr">cas suspects à examiner, méthode adoptée par l'équipe</span><span class="en">cases to review, method adopted by the team</span></div>
+      <div class="stack"><span>Python</span><span>SQL</span><span><span class="fr">Séries temporelles</span><span class="en">Time series</span></span></div>
+      <p class="note"><span class="fr">Données confidentielles : code non publiable, méthodologie détaillée en entretien.</span><span class="en">Confidential data: code cannot be published, method explained in interview.</span></p>
+    </article>
+
+    <article class="card">
+      <div class="tag"><span class="fr">Mission pro · NLP</span><span class="en">Work mission · NLP</span></div>
+      <h3><span class="fr">Analyse de verbatims clients par LLM</span><span class="en">LLM analysis of customer verbatims</span></h3>
+      <p><span class="fr">Classification sémantique de retours clients selon une taxonomie métier, restituée dans une application Streamlit utilisée en autonomie par les équipes.</span><span class="en">Semantic classification of customer feedback against a business taxonomy, delivered in a Streamlit app teams use on their own.</span></p>
+      <div class="result"><span class="fr"><strong>Outil en autonomie</strong> pour les équipes métier</span><span class="en"><strong>Self-service tool</strong> for business teams</span></div>
+      <div class="stack"><span>Mistral Large 2</span><span>Snowflake Cortex</span><span>Streamlit</span></div>
+      <p class="note"><span class="fr">Données confidentielles : code non publiable.</span><span class="en">Confidential data: code cannot be published.</span></p>
+    </article>
+  </div>
+
+  <h3 class="sub"><span class="fr">Projets académiques et personnels</span><span class="en">Academic &amp; personal projects</span></h3>
+  <!-- Remplace chaque lien par l'URL exacte du dépôt GitHub -->
+  <div class="acad">
+    <a href="https://github.com/djey31" target="_blank" rel="noopener"><b><span class="fr">Classification de variétés de haricots</span><span class="en">Dry bean variety classification</span></b><span><span class="fr">SVM (RBF), SMOTE, validation croisée sur 13 543 observations · 93,6 % d'accuracy</span><span class="en">RBF SVM, SMOTE, cross-validation on 13,543 observations · 93.6% accuracy</span></span></a>
+    <a href="https://github.com/djey31" target="_blank" rel="noopener"><b><span class="fr">Prévision du trafic web</span><span class="en">Web traffic forecasting</span></b><span><span class="fr">Modèle de séries temporelles</span><span class="en">Time series model</span></span></a>
+    <a href="https://github.com/djey31" target="_blank" rel="noopener"><b>Football analytics</b><span><span class="fr">Application d'analyse de données sportives</span><span class="en">Sports data analysis app</span></span></a>
+    <a href="https://github.com/djey31" target="_blank" rel="noopener"><b><span class="fr">Simulation boursière</span><span class="en">Stock market simulation</span></b><span><span class="fr">Jeu de simulation de marché</span><span class="en">Market simulation game</span></span></a>
+  </div>
+</section>
+
+<section id="competences">
+  <h2><small><span class="fr">Boîte à outils</span><span class="en">Toolbox</span></small><span class="fr">Compétences</span><span class="en">Skills</span></h2>
+  <div class="skills">
+    <div class="skill"><h4><span class="fr">ML &amp; statistiques</span><span class="en">ML &amp; statistics</span></h4><p><span class="fr">Classification, régression, clustering, scoring, détection d'anomalies, séries temporelles, économétrie causale</span><span class="en">Classification, regression, clustering, scoring, anomaly detection, time series, causal econometrics</span></p></div>
+    <div class="skill"><h4><span class="fr">IA générative</span><span class="en">Generative AI</span></h4><p><span class="fr">API Claude (Anthropic)</span><span class="en">Claude API (Anthropic)</span>, Mistral Large 2, prompt engineering, <span class="fr">pipelines RAG, extraction documentaire, n8n</span><span class="en">RAG pipelines, document extraction, n8n</span></p></div>
+    <div class="skill"><h4><span class="fr">Langages &amp; bases de données</span><span class="en">Languages &amp; databases</span></h4><p>Python (pandas, numpy, scikit-learn), SQL, R, VBA · PostgreSQL, MongoDB</p></div>
+    <div class="skill"><h4><span class="fr">Déploiement &amp; cloud</span><span class="en">Deployment &amp; cloud</span></h4><p>Docker, Docker Compose, FastAPI, <span class="fr">API REST</span><span class="en">REST APIs</span>, Git/GitHub, Scaleway, Snowflake Cortex, Streamlit Cloud, JWT/OAuth2, RBAC</p></div>
+    <div class="skill"><h4><span class="fr">Data &amp; visualisation</span><span class="en">Data &amp; visualisation</span></h4><p>Dataiku, Alteryx, Tableau, Streamlit, Plotly, <span class="fr">Power BI, Excel avancé, Figma</span><span class="en">Power BI, advanced Excel, Figma</span></p></div>
+    <div class="skill"><h4><span class="fr">Certifications &amp; langues</span><span class="en">Certifications &amp; languages</span></h4><p><span class="fr">Dataiku Core Designer, IA générative, Alteryx, Power BI · Français natif, anglais courant</span><span class="en">Dataiku Core Designer, Generative AI, Alteryx, Power BI · French (native), English (fluent)</span></p></div>
+  </div>
+</section>
+
+<section id="formation">
+  <h2><small><span class="fr">Diplômes</span><span class="en">Degrees</span></small><span class="fr">Formation</span><span class="en">Education</span></h2>
+  <div class="edu">
+    <div><span><b>MSc Econometrics &amp; Data Science</b><br><span class="fr">Aix-Marseille School of Economics · cursus en anglais · mention Bien</span><span class="en">Aix-Marseille School of Economics · taught in English · with honours</span></span><span><span class="fr">2024 à 2026</span><span class="en">2024 to 2026</span></span></div>
+    <div><span><span class="fr"><b>Licence MIASHS</b><br>Aix-Marseille Université · maths, informatique, économétrie, optimisation</span><span class="en"><b>BSc MIASHS</b><br>Aix-Marseille University · maths, computer science, econometrics, optimisation</span></span><span><span class="fr">2021 à 2024</span><span class="en">2021 to 2024</span></span></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2><small>Contact</small><span class="fr">Travaillons ensemble</span><span class="en">Let's work together</span></h2>
+  <p><span class="fr">Je recherche un CDI de Data Scientist en Île-de-France, disponible dès maintenant.</span><span class="en">I am looking for a permanent Data Scientist role in the Paris area, available now.</span></p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:djenebacoulibaly.pro@gmail.com">djenebacoulibaly.pro@gmail.com</a>
+    <a class="btn" href="tel:+33758080679">07 58 08 06 79</a>
+    <a class="btn fr" href="CV_Djeneba_Coulibaly.pdf" download>CV (PDF)</a><a class="btn en" href="CV_Djeneba_Coulibaly_EN.pdf" download>Resume (PDF)</a>
+  </div>
+</section>
+
+</main>
+<footer>© 2026 Djénéba Coulibaly · Bonneuil-sur-Marne</footer>
+<script>
+(function(){
+  var h=document.documentElement,btn=document.getElementById('langBtn'),saved=null;
+  try{saved=localStorage.getItem('lang')}catch(e){}
+  var q=new URLSearchParams(location.search).get('lang');
+  var l=q||saved||((navigator.language||'fr').slice(0,2)==='fr'?'fr':'en');
+  function set(x){h.lang=x;document.title=x==='fr'?'Djénéba Coulibaly · Data Scientist':'Djénéba Coulibaly · Data Scientist | Portfolio';try{localStorage.setItem('lang',x)}catch(e){}}
+  set(l==='en'?'en':'fr');
+  btn.addEventListener('click',function(){set(h.lang==='fr'?'en':'fr')});
+})();
+</script>
+</body>
+</html>
