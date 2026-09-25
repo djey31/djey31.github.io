@@ -197,6 +197,19 @@ html[lang="fr"] .lang [data-l="fr"],html[lang="en"] .lang [data-l="en"]{color:#f
     </article>
 
     <article class="card">
+      <div class="tag"><span class="fr">Projet personnel · RAG · Déployé</span><span class="en">Personal project · RAG · Deployed</span></div>
+      <h3><span class="fr">Assistant IA sur contrats d'assurance</span><span class="en">AI assistant on insurance contracts</span></h3>
+      <p><span class="fr">Système de question-réponse sur 15 conditions générales d'assurance (2 343 passages). Il répond uniquement à partir des documents, cite ses sources et s'abstient quand l'information n'y figure pas.</span><span class="en">Question-answering system over 15 insurance policies (2,343 passages). It answers only from the documents, cites its sources, and abstains when the information is not there.</span></p>
+      <ul>
+        <li><span class="fr">Découpage sous la limite du modèle, embeddings multilingues (E5) et base vectorielle ChromaDB</span><span class="en">Chunking under the model limit, multilingual embeddings (E5) and a ChromaDB vector store</span></li>
+        <li><span class="fr">Génération sourcée via API (Groq) avec garde-fou d'abstention contre les hallucinations</span><span class="en">Sourced generation via API (Groq) with an abstention guardrail against hallucinations</span></li>
+        <li><span class="fr">Évaluation (recall@k, MRR, taux de citation) et déploiement en ligne</span><span class="en">Evaluation (recall@k, MRR, citation rate) and live deployment</span></li>
+      </ul>
+      <div class="stack"><span>Python</span><span>RAG</span><span>ChromaDB</span><span>Embeddings E5</span><span>Groq</span><span>Streamlit</span></div>
+      <div class="links"><a href="https://rag-assurance-l84lyjj4nxvuvum9tmxcr5.streamlit.app" target="_blank" rel="noopener"><span class="fr">Tester la démo →</span><span class="en">Try the demo →</span></a> <a href="https://github.com/djey31/rag-assurance" target="_blank" rel="noopener"><span class="fr">Code source →</span><span class="en">Source code →</span></a></div>
+    </article>
+
+    <article class="card">
       <div class="tag"><span class="fr">Mission pro · Assurance santé</span><span class="en">Work mission · Health insurance</span></div>
       <h3><span class="fr">Scoring d'anomalies sur remboursements</span><span class="en">Anomaly scoring on health claims</span></h3>
       <p><span class="fr">Combinaison de plusieurs signaux statistiques (Z-scores, dynamique temporelle) en un score de convergence pondéré exponentiellement.</span><span class="en">Several statistical signals (Z-scores, time dynamics) combined into an exponentially weighted convergence score.</span></p>
